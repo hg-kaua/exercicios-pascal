@@ -1,0 +1,17 @@
+//multiplo de 3 e 7
+
+program ex2;
+
+var
+    constante : integer;
+
+begin
+    // lendo a constante.
+    readln(constante);
+
+    if (constante mod 3 = 0) and (constante mod 7 = 0)then
+        writeln('O número ', constante, ' é multiplo de 3 e 7')
+    else
+        writeln('O número ', constante, ' não é multiplo de 3 e 7');
+        
+end.

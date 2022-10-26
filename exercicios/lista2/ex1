@@ -1,0 +1,15 @@
+//par ou impar
+
+program ex1;
+
+var 
+    num : integer;
+
+begin
+    readln(num);
+    
+    if (num mod 2 = 0) then
+        write('O número ', num, ' é par')
+    else
+        write('O número ', num, ' é ímpar');
+end.

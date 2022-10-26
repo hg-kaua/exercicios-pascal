@@ -1,0 +1,14 @@
+program ex5;
+
+var
+    peso, novoP : real;
+
+begin
+    write('informe o peso da pessoa em kg: ');
+    readln(peso);
+
+    novoP := peso*0.08 + peso;
+
+    write('Seu peso era de ',peso*1000:0:0,' g e agora é ',novoP*1000:0:0,'g');
+
+end.

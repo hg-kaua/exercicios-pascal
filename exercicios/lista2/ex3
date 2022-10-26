@@ -1,0 +1,17 @@
+//Ordem crescente
+
+program ex3;
+
+var 
+    firstN, secondN :integer;
+
+begin
+    write('Informe o primeiro número: ');
+    readln(firstN);
+    write('Informe o segundo número: ');
+    readln(secondN);
+    if (firstN < secondN) then
+        write(firstN,' ', secondN)
+    else
+        write(secondN,' ',firstN);
+end.
