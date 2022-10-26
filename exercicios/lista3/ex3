@@ -1,0 +1,24 @@
+program ex3;
+
+var
+    mes : integer;
+begin
+    write('Informe o mês: ');
+    readln(mes);
+    case (mes) of
+        1 : write('Janeiro');
+        2 : write('Fevereiro');
+        3 : write('Março');
+        4 : write('Abril');
+        5 : write('Maio');
+        6 : write('Junho');
+        7 : write('Julho');
+        8 : write('Agosto');
+        9 : write('Setembro');
+        10 : write('Outubro');
+        11 : write('Novembro');
+        12 : write('Dezembro')
+    else
+        write('mês inválido');
+    end;
+end.

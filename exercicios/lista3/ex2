@@ -1,0 +1,20 @@
+//Faça um algoritmo que leia o ano de nascimento de uma pessoa, 
+//calcule e mostre sua idade. Além disso, informe a sua classe eleitoral
+
+program ex2;
+
+var
+    anoDeNascimento, idade : integer;
+begin
+    write('Informe seu ano de nascimento: ');
+    readln(anoDeNascimento);
+
+    idade := 2022 - anoDeNascimento; 
+
+    if (idade < 16) then
+        write('Não eleitor')
+    else if (idade >= 18) and (idade <= 65) then
+        write('Eleitor obrigatório')
+    else
+        write('Eleitor facultativo');
+end.

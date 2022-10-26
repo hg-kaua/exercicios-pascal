@@ -1,0 +1,24 @@
+program ex4;
+
+var
+    operador : char;
+    num1, num2 : integer;
+
+begin
+    write('Primeiro número: ');
+    readln(num1);
+    writeln('escolha: +  -  x  / ');
+    readln(operador);
+    write('Segundo número: ');
+    readln(num2);
+
+    case (operador) of
+        '+' : write('A soma é: ', num1+num2);
+        '-' : write('A subtraçao é: ', num1-num2);
+        'x' : write('A multiplicação é: ', num1*num2);
+        '/' : write('A divisão é: ', num1 div num2)
+
+        else
+            write('Operador inválido');
+        end;
+end.
