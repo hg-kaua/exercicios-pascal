@@ -1,0 +1,23 @@
+// Faça programa que lê duas notas de um aluno, calcula sua média e imprime uma mensagem
+
+program ex8;
+
+var
+    nota1, nota2, media : real;
+
+begin   
+    write('Informe a primeira nota: ');
+    readln(nota1);
+    write('Informe a segunda nota: ');
+    readln(nota2);
+
+    media := (nota1 + nota2) / 2;
+    writeln('Sua média final foi ', media:0:1);
+
+    if (media >= 7) then
+        write('APROVADO')
+    else if (media < 5) then
+        write('REPROVADO')
+    else
+        write('PROVA FINAL');
+end.
