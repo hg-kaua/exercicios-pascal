@@ -1,0 +1,17 @@
+program ex8;
+
+var
+    nome1, nome2 : string;
+
+begin
+    write('nome: ');
+    readln(nome1);
+    write('nome 2: ');
+    readln(nome2);
+
+    if (nome1 > nome2) then
+        write(nome1,' ', nome2);
+    else
+        write(nome2,' ', nome1);
+
+end.

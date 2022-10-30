@@ -1,0 +1,22 @@
+program ex2;
+
+var 
+    i : integer;
+    nota, nota2 : real;
+    media : array[1..30] of real;
+
+begin
+    for i := 1 to 5 do
+        begin
+            write('Primeira nota: ');
+            readln(nota);
+            write('Segunda nota: ');
+            readln(nota2);
+
+            media[i] := (nota + 2 * nota2)/3;
+
+        end;
+     for i := 1 to 5 do
+        writeln('A média final do  aluno ',i ,' é ', media[i]:0:1);
+
+end.

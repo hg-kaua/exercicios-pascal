@@ -1,0 +1,19 @@
+program ex7;
+
+var
+    estado : string;
+
+begin
+    write('Informe seu estado: ');
+    readln(estado);
+
+    if (estado = 'rj') then 
+        write('carioca')
+    else if (estado = 'sp') then
+        write('paulista')
+    else if (estado = 'mg') then
+        write('mineiro')
+    else 
+        write('outro estado');
+
+end.

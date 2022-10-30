@@ -1,0 +1,68 @@
+program ex1;
+
+var
+    opc, total : integer;
+begin
+
+    total := 0;
+
+    writeln('PRATO PRINCIPAL');    
+    writeln('1 - Vegetariano');   
+    writeln('2 - Peixe');    
+    writeln('3 - Frango');    
+    writeln('4 – Carne');    
+    writeln('5 – Sem prato principal');    
+
+    write('O que o senhor desaja: ');
+    readln(opc);
+
+    case (opc) of 
+        1 : total := 180;
+        2 : total := 230;
+        3 : total := 250;
+        4 : total := 350;
+        5 : total := 0
+        else
+            writeln('Opção inválida');
+
+    writeln('BEBIDA');    
+    writeln('1 - Chá (lata)');    
+    writeln('2 - Suco de laranja');    
+    writeln('3 - Suco de melão');    
+    writeln('4 – Refrigentantediet');    
+    writeln('5 – Sem bebida');    
+
+    write('O que o senhor desaja: ');
+    readln(opc);
+
+    case (opc) of 
+        1 : total := total + 80;
+        2 : total := total + 150;
+        3 : total := total + 70;
+        4 : total := total + 2;
+        5 : total := total + 0
+        else
+            writeln('Opção inválida');
+
+    writeln('SOBREMESA');    
+    writeln('1 - Abacaxi');    
+    writeln('2 - Sorvete diet');    
+    writeln('3 - Mousse diet');    
+    writeln('4 – Moussechocolate');    
+    writeln('5 – Sem sobremesa');    
+
+    write('O que o senhor desaja: ');
+    readln(opc);
+
+    case (opc) of 
+        1 : total := total + 75;
+        2 : total := total + 110;
+        3 : total := total + 60;
+        4 : total := total + 250;
+        5 : total := total + 0
+        else
+            writeln('Opção inválida');
+    
+    write('O total de calorias nessa refeição é de ', total, ' cals.');
+
+end.

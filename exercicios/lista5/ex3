@@ -1,0 +1,14 @@
+program ex3;
+
+var
+    num, i : integer
+begin
+    write('numero inteiro menor que 10: ');
+    readln(num);
+
+    for i:= to 100 do
+        begin
+             if (i mod num = 0) then
+                writeln('O numero ', i, 'é multiplo de ', num);
+        end;
+end.

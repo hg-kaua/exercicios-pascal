@@ -1,0 +1,20 @@
+program ex1;
+
+var 
+    i : integer;
+    nota, nota2, media : real;
+
+begin
+    for i := 1 to 5 do
+        begin
+            write('Primeira nota: ');
+            readln(nota);
+            write('Segunda nota: ');
+            readln(nota2);
+
+            media := (nota + nota2)/2;
+
+            writeln('A média do ', i, ' aluno é ', media:0:1);
+        end;
+
+end.
