@@ -1,0 +1,56 @@
+program ex1;
+
+var
+    mat : array[1..3,1..5] of integer;
+    lin, col : integer;
+    linha : array[1..3] of integer;
+    coluna : array[1..5] of integer;
+function somaLinha() : integer;
+    begin
+        for lin:=1 to 3 do
+            begin
+                for col:=1 to 5 do
+                    begin 
+                        linha[lin] := linha[lin] + mat[lin,col];
+                    end;
+            end;
+        for lin:=1 to 3 do
+            begin
+                writeln('A soma da linha ', lin,' foi: ',linha[lin]);
+            end;
+    end;
+function somaColuna() : integer;
+    begin
+        for col:=1 to 5 do
+            begin
+                for lin:=1 to 3 do
+                    begin
+                        coluna[col] := coluna[col] + mat[lin,col];
+                    end;
+            end;
+        for col:=1 to 5 do
+            begin
+                writeln('A soma da coluna ', col,' foi: ', coluna[col]);
+            end;
+    end;
+begin
+    randomize;
+    for lin:=1 to 3 do
+        begin
+            for col:=1 to 5 do 
+                begin
+                    mat[lin,col] := random(20);
+                end;
+        end;
+    for lin:=1 to 3 do
+        begin
+            for col:=1 to 5 do 
+                begin
+                    write(mat[lin,col], ' ');
+                end;
+            writeln();
+        end;
+    somaLinha();
+    writeln();
+    somaColuna();
+end.

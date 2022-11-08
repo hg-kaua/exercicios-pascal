@@ -1,0 +1,53 @@
+program ex4;
+
+var
+    frase : string[80];
+    i, opc : integer;
+function lerFrase() : string;   
+    begin
+        writeln('Insira a frase abaixo:');
+        readln(frase);
+    end;
+function espacoEmBranco() : string;
+    var 
+        quantidadeEspacos : integer;
+    begin
+        quantidadeEspacos := 0;
+        for i:=1 to length(frase) do
+                begin
+                    if (frase[i] = ' ') then
+                        quantidadeEspacos := quantidadeEspacos + 1;
+                end;
+        writeln('O total de espaços é: ',quantidadeEspacos);
+    end;
+function letrasA() : string;
+    var
+        quantidadeLetrasA : integer;
+        fraseMaiuscula : string;
+    begin
+        fraseMaiuscula := upcase(frase);
+        quantidadeLetrasA := 0;
+        for i:=1 to length(frase) do
+            begin
+                if (fraseMaiuscula[i] = 'A') then
+                    quantidadeLetrasA := quantidadeLetrasA + 1;
+            end;
+        writeln('O total de letras a é: ',quantidadeLetrasA);
+    end;
+begin
+    repeat
+        writeln('1 - Ler frase');
+        writeln('2 - Quantidades de espaços');
+        writeln('3 - Quantidade de letras A');
+        writeln('4 - Fim');
+
+        write('Insira sua opçao: ');
+        readln(opc);
+
+        case (opc) of 
+            1 : lerFrase();
+            2 : espacoEmBranco();
+            3 : letrasA();
+        end;
+    until(opc = 4);
+end.

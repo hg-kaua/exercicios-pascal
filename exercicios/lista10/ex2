@@ -1,0 +1,101 @@
+program ex2;
+
+var
+    M, N, P : array[1..5,1..5] of integer;
+    i, j, maior, x, y, soma : integer;
+
+function diagonalM() : integer;
+    begin
+        write('Os valores da diagonal M são: ');
+        for i:=1 to 5 do
+            begin
+                for j:=1 to 5 do
+                    begin
+                        if (i = j) then
+                            begin
+                                write(M[i,j], ' ');
+                            end;
+                    end;
+            end;
+        writeln();
+    end;
+function numeroParesP() : integer;
+    var
+        total : integer;
+    begin
+        total := 0;
+        for i:=1 to 5 do
+            begin
+                for j:=1 to 5 do
+                    begin
+                        if (P[i,j] mod 2 = 0) then
+                            begin
+                                total := total + 1;
+                            end;
+                    end;
+            end;
+        writeln('O total de números pares de P foi de: ', total,' elementos');
+    end;
+begin
+    randomize;
+    maior := 0;
+
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    M[i,j] := random(20);
+                    if (M[i,j] > maior) then
+                        begin
+                            maior := M[i,j];
+                            x := i;
+                            y := j;
+                        end;
+                end;
+        end;
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    N[i,j] := 2 * M[i,j];
+                end;
+        end;
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    P[i,j] := N[i,j] + M[i,j];
+                end;
+        end;
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    write(M[i,j]:2, ' ');
+                end;
+            writeln();
+        end;
+    writeln();
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    write(N[i,j]:2, ' ');
+                end;
+            writeln();
+        end;
+    writeln();
+    for i:=1 to 5 do
+        begin
+            for j:=1 to 5 do
+                begin
+                    write(P[i,j]:2, ' ');
+                end;
+            writeln();
+        end;
+    writeln();
+    diagonalM();
+    numeroParesP();
+    writeln('O maior número da matriz M é o ', maior, ' e foi encontrado na linha ',x,' na coluna ',y);
+
+end.
